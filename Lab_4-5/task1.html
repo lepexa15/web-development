@@ -1,1 +1,85 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .main {
+            min-height: 100%;
+            position: relative;
+            background-color: rgb(220, 224, 201);
+            margin: 5px 0px;
+            padding-bottom: 60px; /* місце під футер */
+        }
+        .header {
+            height: 150px;
+            line-height: 150px;
+            margin: 5px 0px;
+            text-align: center;
+            background-color: rgb(0, 153, 145);
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            background: #357291;
+            height: 36px;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 9px 0px;
+            color: #ddd;
+            text-align: center;
+            margin: 5px 0px;
+        }
+        .menu a {
+            color: #fff;
+            margin: 0px 12px;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            color: #bbb;
+            text-decoration: underline;
+        }
+        .content {
+            padding: 50px;
+        }
+        .footer {
+            height: 50px;
+            line-height: 50px;
+            position: absolute;
+            text-align: center;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #274b5e;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">Header</div>
+        <div class="menu">
+            <a href="#">Item1</a>
+            <a href="#">Item2</a>
+            <a href="#">Item3</a>
+            <a href="#">Item4</a>
+        </div>
+        <div class="content">
+            <strong>Content</strong><br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
