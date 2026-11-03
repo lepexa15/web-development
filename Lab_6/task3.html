@@ -19,24 +19,24 @@
 <body>
     <h2>Завдання 3: Таблиця електронних компонентів</h2>
     <script>
-        let products = [
-            [ code: "COMP-01", name: "Мікроконтролер ATmega328P", price: 150, quantity: 10 ],
-            [ code: "COMP-02", name: "Програматор USBasp", price: 120, quantity: 2 ],
-            [ code: "COMP-03", name: "Макетна плата", price: 80, quantity: 5 ],
-            [ code: "COMP-04", name: "Набір резисторів", price: 200, quantity: 1 ],
-            [ code: "COMP-05", name: "Конденсатор 100мкФ", price: 5, quantity: 50 ]
-        ];
+	let products = [
+    	   ["COMP-01", "Мікроконтролер ATmega328P", 150, 10],
+    	   ["COMP-02", "Програматор USBasp", 120, 2],
+    	   ["COMP-03", "Макетна плата", 80, 5],
+    	   ["COMP-04", "Набір резисторів", 200, 1],
+    	   ["COMP-05", "Конденсатор 100мкФ", 5, 50]
+	];
         document.write("<table>");
         document.write("<tr><th>Код</th><th>Найменування</th><th>Ціна за од. (грн)</th><th>Кількість</th><th>Сума (грн)</th></tr>");
         let amount = 0; 
         for (let i = 0; i < products.length; i++) {
-            let sum = products[i].price * products[i].quantity;
+            let sum = products[i][2] * products[i][3];
             amount += sum;          
             document.write("<tr>" +
-    		"<td>" + products[i].code + "</td>" +
-    		"<td>" + products[i].name + "</td>" +
-    		"<td>" + products[i].price + "</td>" +
-    		"<td>" + products[i].quantity + "</td>" +
+    		"<td>" + products[i][0] + "</td>" +
+    		"<td>" + products[i][1] + "</td>" +
+    		"<td>" + products[i][2] + "</td>" +
+    		"<td>" + products[i][3] + "</td>" +
     		"<td>" + sum + "</td>" +
 	"</tr>");
         }
