@@ -1,1 +1,29 @@
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна №6 - Завдання 1 (Лєпіхін Гліб ІТ-41/1)</title>
+</head>
+<body>
+    <h2>Завдання 1: Робота з чотиризначним числом</h2>
+    <script>
+        let input = prompt("Введіть чотиризначне число:", "");
+        if (input !== null && input.trim().length === 4 && !isNaN(input)) {
+            let number = parseInt(input);
+            let d1 = parseInt(input[0]);
+            let d2 = parseInt(input[1]);
+            let d3 = parseInt(input[2]);
+            let d4 = parseInt(input[3]);
+            if (number % 2 === 0) {
+                let product = d1 * d2 * d3 * d4;
+                alert("Число " + number + " є парним.\nДобуток його цифр: " + product);
+            } else {
+                let sum = d1 + d2 + d3 + d4;
+                alert("Число " + number + " є непарним.\nСума його цифр: " + sum);
+            }
+        } else {
+            alert("Введено некоректне значення. Будь ласка, оновіть сторінку та введіть чотиризначне число.");
+        }
+    </script>
+</body>
+</html>
