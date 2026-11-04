@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна №7 - Завдання 3 (Лєпіхін Гліб ІТ-41/1)</title>
+</head>
+<body>
+    <h2>Завдання 3: Фібоначчі з мемоїзацією</h2>
+    <script>
+        let numberOfRecusrionCalls = 0;
+        let numberOfMemoCalls = 0;
+        function fibonachiRecursion(numberInRow) {
+            numberOfRecusrionCalls++;
+            if(numberInRow <= 1) {
+                return 1;
+            }
+            return fibonachiRecursion(numberInRow - 1) + fibonachiRecursion(numberInRow - 2);
+        }
+        function createFibonachiMemo() {
+            const cache = {};
+            return function fibMemo(numberInRow) {
+                numberOfMemoCalls++;
+                if (numberInRow in cache) {
+                    return cache[numberInRow];
+                }
+                if (numberInRow <= 1) {
+                    return 1;
+                }
+                cache[numberInRow] = fibMemo(numberInRow - 1) + fibMemo(numberInRow - 2);
+                return cache[numberInRow];
+            }
+        }
+        const fibonachiMemo = createFibonachiMemo();
+        console.log("Рекурсія:", fibonachiRecursion(5), "| Кількість викликів:", numberOfRecusrionCalls);
+        console.log("Мемоїзація:", fibonachiMemo(5), "| Кількість викликів:", numberOfMemoCalls);
+    </script>
+</body>
+</html>

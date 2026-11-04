@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна №7 - Завдання 2 (Лєпіхін Гліб ІТ-41/1)</title>
+</head>
+<body>
+    <h2>Завдання 2: Рекурсивний факторіал</h2>
+    <script>
+        function factorialRecursion(n) {
+            if (n < 0) return undefined;
+            if (n === 0 || n === 1) return 1;
+            return n * factorialRecursion(n - 1);
+        } 
+        console.log("Факторіал 5 =", factorialRecursion(5)); // 120
+    </script>
+</body>
+</html>
