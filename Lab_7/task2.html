@@ -8,7 +8,7 @@
     <h2>Завдання 2: Рекурсивний факторіал</h2>
     <script>
         function factorialRecursion(n) {
-            if (n < 0) return undefined;
+            if (n < 0) return;
             if (n === 0 || n === 1) return 1;
             return n * factorialRecursion(n - 1);
         } 
