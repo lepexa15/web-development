@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна №7 - Завдання 1 (Лєпіхін Гліб ІТ-41/1)</title>
+</head>
+<body>
+    <h2>Завдання 1: Функція sumOrMinus</h2>
+    <script>
+        function sumOrMinus(...args) {
+            if (args.length === 0) return 0;  
+            if (args.length % 2 === 0) {
+                return args.reduce((sum, current) => sum + current, 0);
+            } else {
+                let result = args[args.length - 1];
+                for (let i = args.length - 2; i >= 0; i--) {
+                    result -= args[i];
+                }
+                return result;
+            }
+        }
+        console.log("sumOrMinus(1, 2, 3) =", sumOrMinus(1, 2, 3)); // 0
+        console.log("sumOrMinus(2, 5, 8, 4) =", sumOrMinus(2, 5, 8, 4)); // 19
+        console.log("sumOrMinus(8, 1, 2) =", sumOrMinus(8, 1, 2)); // -7
+    </script>
+</body>
+</html>
