@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Каталог меблів</h1>
+    <div class="tabs-container">
+        <table class="tabs-table">
+            <tr>
+                <td onclick="info_for_tab(1)">М'які меблі</td>
+                <td onclick="info_for_tab(2)">Корпусні меблі</td>
+                <td onclick="info_for_tab(3)">Для кухні</td>
+                <td onclick="info_for_tab(4)">Офісні меблі</td>
+                <td onclick="info_for_tab(5)">Декор</td>
+            </tr>
+        </table>
+        <div id="tab-content-box">
+            <h3>Оберіть категорію</h3>
+            <p>Натисніть на одну з вкладок вище, щоб переглянути доступні меблі</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
