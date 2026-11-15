@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Завдання 2</h1>
+    <div class="slider">
+        <div class="item" style="display: block;">
+            <img src="img/slide1.jpg" alt="Перший слайд">
+            <div class="slideText">Заголовок слайда 1</div>
+        </div>
+        <div class="item" style="display: none;">
+            <img src="img/slide2.jpg" alt="Другий слайд">
+            <div class="slideText">Заголовок слайда 2</div>
+        </div>
+        <div class="item" style="display: none;">
+            <img src="img/slide3.jpg" alt="Третій слайд">
+            <div class="slideText">Заголовок слайда 3</div>
+        </div>
+        <a class="prev" onclick="minusSlide1()">❮</a>
+        <a class="next" onclick="plusSlide1()">❯</a>
+    </div>
+    <div class="slider-dots" style="margin-bottom: 50px;">
+        <span class="slider-dots_item slider-dots_item-1 active" onclick="currentSlide1(1)"></span>
+        <span class="slider-dots_item slider-dots_item-1" onclick="currentSlide1(2)"></span>
+        <span class="slider-dots_item slider-dots_item-1" onclick="currentSlide1(3)"></span>
+    </div>
+    <hr style="border: 1px solid #ccc; margin: 40px 0;">
+    <h1>Завдання 3</h1>
+    <div class="slider-variant8">
+        <div class="item" style="display: block;">
+            <img src="img/slide4.jpg" alt="Дивани">
+            <div class="slideText">Нова колекція диванів</div>
+        </div>
+        <div class="item" style="display: none;">
+            <img src="img/slide5.jpg" alt="Шафи">
+            <div class="slideText">Знижки до -20% на шафи</div>
+        </div>
+        <div class="item" style="display: none;">
+            <img src="img/slide6.jpg" alt="Офіс">
+            <div class="slideText">Облаштуйте свій домашній офіс</div>
+        </div>
+        <a class="prev" onclick="minusSlide2()">❮</a>
+        <a class="next" onclick="plusSlide2()">❯</a>
+        <div class="slider-dots">
+            <span class="slider-dots_item slider-dots_item-2 active" onclick="currentSlide2(1)"></span>
+            <span class="slider-dots_item slider-dots_item-2" onclick="currentSlide2(2)"></span>
+            <span class="slider-dots_item slider-dots_item-2" onclick="currentSlide2(3)"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

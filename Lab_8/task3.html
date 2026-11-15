@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Реєстрація нового клієнта</h2>
+        <form name="regForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label>ПІБ:</label>
+                <input type="text" name="fullName" id="fullName" placeholder="Введіть ваше ім'я">
+                <span class="error-msg" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label>Електронна пошта (Email):</label>
+                <input type="text" name="email" id="email" placeholder="example@mail.com">
+                <span class="error-msg" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label>Пароль:</label>
+                <input type="password" name="password" id="password" placeholder="Мінімум 6 символів">
+                <span class="error-msg" id="passError"></span>
+            </div>
+            <input type="submit" value="Створити акаунт" class="submit-btn">
+        </form>
+    </div>
+    <script src="script.js"></script>
+<div class="form-container">
+        <h2>Вхід в особистий кабінет</h2>
+        <form name="loginForm" onsubmit="return validateLoginForm()">
+            <div class="form-group">
+                <label>Електронна пошта (Email):</label>
+                <input type="text" name="loginEmail" id="loginEmail" placeholder="example@mail.com">
+                <span class="error-msg" id="loginEmailError"></span>
+            </div>
+            <div class="form-group">
+                <label>Пароль:</label>
+                <input type="password" name="loginPassword" id="loginPassword" placeholder="Введіть ваш пароль">
+                <span class="error-msg" id="loginPassError"></span>
+            </div>
+            <input type="submit" value="Увійти" class="submit-btn">
+        </form>
+    </div>
+</body>
+</html>
