@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль адміністратора — Електронний каталог меблів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Електронний каталог меблів</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог товарів</a></li>
+                    <li><a href="auth.html">Вхід/Реєстрація</a></li>
+                    <li><a href="admin.html" class="active">Адміністратор</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Модуль адміністратора бази даних</h1>
+        <div class="admin-layout">
+            <div class="box">
+                <h2 id="formHeading">Додати товар</h2>
+                <form id="adminForm" novalidate>
+                    <input type="hidden" id="itemId">
+                    <div class="form-row">
+                        <label for="itemName">Назва меблів:</label>
+                        <input type="text" id="itemName" placeholder="Наприклад: Диван кутовий Оскар">
+                        <div class="error-text">Введіть назву товару</div>
+                    </div>
+                    <div class="form-row">
+                        <label for="itemCategory">Категорія:</label>
+                        <select id="itemCategory">
+                            <option value="М'які меблі">М'які меблі</option>
+                            <option value="Корпусні меблі">Корпусні меблі</option>
+                            <option value="Для кухні">Для кухні</option>
+                            <option value="Офісні меблі">Офісні меблі</option>
+                            <option value="Декор та аксесуари">Декор та аксесуари</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="itemManufacturer">Виробник:</label>
+                        <input type="text" id="itemManufacturer" placeholder="Blest">
+                        <div class="error-text">Вкажіть виробника</div>
+                    </div>
+                    <div class="form-row">
+                        <label for="itemDimensions">Габарити (Ш×Г×В, см):</label>
+                        <input type="text" id="itemDimensions" placeholder="220×150×85">
+                        <div class="error-text">Вкажіть габарити виробу</div>
+                    </div>
+                    <div class="form-row">
+                        <label for="itemMaterial">Матеріал:</label>
+                        <input type="text" id="itemMaterial" placeholder="ДСП/Велюр">
+                        <div class="error-text">Вкажіть матеріал</div>
+                    </div>
+                    <div class="form-row">
+                        <label for="itemPrice">Ціна(грн):</label>
+                        <input type="number" id="itemPrice" placeholder="12500">
+                        <div class="error-text">Введіть ціну більше 0</div>
+                    </div>
+                    <div class="form-row">
+                        <label for="itemDesc">Опис товару:</label>
+                        <textarea id="itemDesc" rows="3" placeholder="Короткий опис характеристик..."></textarea>
+                        <div class="error-text">Введіть опис(мінімум 10 символів)</div>
+                    </div>
+                    <button type="submit" class="btn">Зберегти</button>
+                    <button type="button" class="btn btn-secondary" id="cancelEdit" style="display: none;">Скасувати</button>
+                </form>
+            </div>
+            <div class="box" style="overflow-x: auto;">
+                <h2>Перелік товарів у БД</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Назва</th>
+                            <th>Категорія</th>
+                            <th>Виробник</th>
+                            <th>Ціна</th>
+                            <th>Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            Курсова робота з дисципліни «Web-програмування та web-дизайн» — Варіант 8
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

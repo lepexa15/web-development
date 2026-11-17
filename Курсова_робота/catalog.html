@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Електронний каталог меблів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Електронний каталог меблів</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html" class="active">Каталог товарів</a></li>
+                    <li><a href="auth.html">Вхід/Реєстрація</a></li>
+                    <li><a href="admin.html">Адміністратор</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Каталог меблів</h1>
+        <div class="tabs" id="categoryTabs">
+            <button type="button" class="tab-btn active" data-category="all">Усі категорії</button>
+            <button type="button" class="tab-btn" data-category="М'які меблі">М'які меблі</button>
+            <button type="button" class="tab-btn" data-category="Корпусні меблі">Корпусні меблі</button>
+            <button type="button" class="tab-btn" data-category="Для кухні">Для кухні</button>
+            <button type="button" class="tab-btn" data-category="Офісні меблі">Офісні меблі</button>
+            <button type="button" class="tab-btn" data-category="Декор та аксесуари">Декор та аксесуари</button>
+        </div>
+        <div class="filter-bar">
+            <div class="filter-field">
+                <label for="searchInput">Пошук за назвою товару:</label>
+                <input type="text" id="searchInput" placeholder="Наприклад: Диван, Шафа, Стіл...">
+            </div>
+            <div class="filter-field">
+                <label for="manufacturerFilter">Фільтр за виробником:</label>
+                <select id="manufacturerFilter">
+                    <option value="all">Усі виробники</option>
+                    <option value="Blest">Blest</option>
+                    <option value="GERBOR">GERBOR</option>
+                    <option value="BRW Україна">BRW Україна</option>
+                    <option value="AMF">AMF</option>
+                    <option value="Viorina-Deko">Viorina-Deko</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-secondary" id="resetBtn">Скинути</button>
+        </div>
+        <div class="products-grid" id="productsGrid"></div>
+    </main>
+    <footer>
+        <div class="container">
+            Курсова робота з дисципліни «Web-програмування та web-дизайн» — Варіант 8
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
