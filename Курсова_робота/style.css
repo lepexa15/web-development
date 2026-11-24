@@ -100,6 +100,14 @@ h1, h2, h3 {
     margin: 15px 0;
     font-size: 14px;
 }
+.status-box {
+    background-color: #e6fffa;
+    border: 1px solid #38b2ac;
+    color: #234e52;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
 /* Слайдер */
 .slider {
     background-color: #ffffff;
@@ -120,6 +128,14 @@ h1, h2, h3 {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+}
+.slide-img {
+    width: 100%;
+    max-width: 420px;
+    height: 190px;
+    object-fit: cover;
+    border: 1px solid #d0d7de;
+    margin-bottom: 10px;
 }
 /* Категорії на головній */
 .categories-list {
@@ -304,7 +320,6 @@ table.data-table td {
 table.data-table th {
     background-color: #e9ecef;
 }
-/* Підвал */
 footer {
     background-color: #334e68;
     color: #ffffff;
