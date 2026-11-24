@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <span class="logo">Електронний каталог меблів</span>
+            <span class="header-sub">Лабораторна робота №9 - Варіант 8</span>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Каталог товарів та кошик покупок</h1>
+        <div class="shop-layout">
+            <section class="products-section">
+                <h2>Доступні меблі в магазині</h2>
+                <div class="products-grid" id="productsList"></div>
+            </section>
+            <aside class="basket-section">
+                <h2>Кошик (<span id="basketCount">0</span>)</h2>
+                <div id="basketList">
+                    <p class="empty-text">Кошик порожній</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            © 2026 СумДУ | Розробник: студент групи ІТ-41/1 Лєпіхін Гліб | Варіант 8
+        </div>
+    </footer>
+    <script src="store.js"></script>
+</body>
+</html>
