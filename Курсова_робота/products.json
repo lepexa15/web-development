@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Диван розкладний «Марсель»",
+        "category": "М'які меблі",
+        "manufacturer": "Blest",
+        "dimensions": "230×105×88 см",
+        "material": "Каркас дерево, оббивка рогожка",
+        "price": 16800,
+        "image": "images/divan.jpg",
+        "description": "Зручний диван із механізмом трансформації та нішею для білизни."
+    },
+    {
+        "id": 2,
+        "name": "Шафа-купе «Лофт-2»",
+        "category": "Корпусні меблі",
+        "manufacturer": "GERBOR",
+        "dimensions": "180×60×220 см",
+        "material": "Ламінована ДСП 16 мм",
+        "price": 11400,
+        "image": "images/shafa.jpg",
+        "description": "Містка дводверна шафа-купе зі штангою для одягу та відділенням із полицями."
+    },
+    {
+        "id": 3,
+        "name": "Кухонний комплект «Олівія»",
+        "category": "Для кухні",
+        "manufacturer": "BRW Україна",
+        "dimensions": "200×60×210 см",
+        "material": "Корпус ДСП, фасади МДФ",
+        "price": 14200,
+        "image": "images/kuhnya.jpg",
+        "description": "Набір кухонних шаф із вологостійкою стільницею."
+    },
+    {
+        "id": 4,
+        "name": "Стіл комп’ютерний «СК-14»",
+        "category": "Офісні меблі",
+        "manufacturer": "AMF",
+        "dimensions": "120×60×75 см",
+        "material": "ЛДСП, металеві опори",
+        "price": 4300,
+        "image": "images/stil.jpg",
+        "description": "Робочий стіл із трьома висувними шухлядами для дому або офісу."
+    },
+    {
+        "id": 5,
+        "name": "Крісло м’яке «Берген»",
+        "category": "М'які меблі",
+        "manufacturer": "Blest",
+        "dimensions": "82×85×92 см",
+        "material": "Велюр, букові ніжки",
+        "price": 7900,
+        "image": "images/krislo.jpg",
+        "description": "Комфортне крісло для відпочинку з високою спинкою."
+    },
+    {
+        "id": 6,
+        "name": "Полиця настінна «ПН-3»",
+        "category": "Декор та аксесуари",
+        "manufacturer": "Viorina-Deko",
+        "dimensions": "90×22×45 см",
+        "material": "ЛДСП Дуб Сонома",
+        "price": 1150,
+        "image": "images/polytsya.jpg",
+        "description": "Декоративна навісна полиця для книг та елементів інтер'єру."
+    }
+]
