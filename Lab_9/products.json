@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Диван розкладний «Марсель»",
+        "category": "М'які меблі",
+        "amount": 3,
+        "image": "images/divan.jpg"
+    },
+    {
+        "name": "Крісло м’яке «Берген»",
+        "category": "М'які меблі",
+        "amount": 4,
+        "image": "images/krislo.jpg"
+    },
+    {
+        "name": "Двоспальне ліжко «Верона»",
+        "category": "М'які меблі",
+        "amount": 2,
+        "image": "images/divan2.jpg"
+    },
+    {
+        "name": "Шафа-купе «Лофт-2»",
+        "category": "Корпусні меблі",
+        "amount": 2,
+        "image": "images/shafa.jpg"
+    },
+    {
+        "name": "Стіл комп’ютерний «СК-14»",
+        "category": "Корпусні меблі",
+        "amount": 5,
+        "image": "images/stil.jpg"
+    },
+    {
+        "name": "Полиця настінна «ПН-3»",
+        "category": "Корпусні меблі",
+        "amount": 3,
+        "image": "images/polytsya.jpg"
+    },
+    {
+        "name": "Кухонний комплект «Олівія»",
+        "category": "Для кухні",
+        "amount": 2,
+        "image": "images/kuhnya.jpg"
+    },
+    {
+        "name": "Стіл обідній «Дуб»",
+        "category": "Для кухні",
+        "amount": 3,
+        "image": "images/stil2.jpg"
+    },
+    {
+        "name": "Комплект стільців «Модерн»",
+        "category": "Для кухні",
+        "amount": 4,
+        "image": "images/krislo2.jpg"
+    }
+]
