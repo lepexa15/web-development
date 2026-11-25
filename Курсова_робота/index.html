@@ -33,30 +33,38 @@
                 <strong>Увага:</strong> перегляд каталогу товарів доступний лише зареєстрованим користувачам.
                 Для переходу до каталогу виконайте вхід або зареєструйтеся.
             </div>
-            <!-- Тимчасове перемикання кнопок через JS -->
+            <!-- Тимчасове перемикання кнопок через JS; на бекенді керуватиметься через $_SESSION -->
             <a href="auth.html" class="btn" id="homeAuthBtn">Перейти до входу / реєстрації</a>
             <a href="catalog.html" class="btn" id="homeCatalogBtn" style="display: none;">Перейти до каталогу</a>
         </div>
         <div class="slider" id="mainSlider">
             <div class="slide active">
                 <img src="images/slide1.jpg" alt="М’які меблі" class="slide-img">
-                <h3>М’які меблі для вітальні та спальні</h3>
-                <p>Дивани, крісла та ліжка від українських виробників з гарантією якості.</p>
+                <div class="slide-text">
+                    <h3>М’які меблі для вітальні та спальні</h3>
+                    <p>Дивани, крісла та ліжка від українських виробників з гарантією якості.</p>
+                </div>
             </div>
             <div class="slide">
                 <img src="images/slide2.jpg" alt="Корпусні меблі" class="slide-img">
-                <h3>Корпусні меблі для дому та офісу</h3>
-                <p>Шафи-купе, комоди, стелажі, комп’ютерні столи та кухонні гарнітури.</p>
+                <div class="slide-text">
+                    <h3>Корпусні меблі для дому та офісу</h3>
+                    <p>Шафи-купе, комоди, стелажі, комп’ютерні столи та кухонні гарнітури.</p>
+                </div>
             </div>
             <div class="slide">
                 <img src="images/slide3.jpg" alt="Кухонні меблі" class="slide-img">
-                <h3>Зручний пошук та фільтрація в каталозі</h3>
-                <p>Швидкий підбір меблів за категорією, назвою виробу або фабрикою-виробником.</p>
+                <div class="slide-text">
+                    <h3>Зручний пошук та фільтрація в каталозі</h3>
+                    <p>Швидкий підбір меблів за категорією, назвою виробу або фабрикою-виробником.</p>
+                </div>
             </div>
-            <div class="slider-controls">
-                <button type="button" class="btn btn-small" onclick="changeSlide(-1)">« Назад</button>
-                <span id="slideCounter">Слайд 1 з 3</span>
-                <button type="button" class="btn btn-small" onclick="changeSlide(1)">Вперед »</button>
+            <a class="prev" onclick="plusSlide(-1)">❮</a>
+            <a class="next" onclick="plusSlide(1)">❯</a>
+            <div class="slider-dots">
+                <span class="slider-dots_item active" onclick="currentSlide(1)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(3)"></span>
             </div>
         </div>
         <h2>Категорії товарів у системі</h2>
