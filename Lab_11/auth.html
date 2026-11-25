@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід та реєстрація - Електронний каталог меблів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Електронний каталог меблів</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="catalog.html">Каталог товарів</a></li>
+                    <li id="navAuth"><a href="auth.html" class="active">Вхід/Реєстрація</a></li>
+                    <li id="navAdmin" style="display: none;"><a href="admin.html">Адміністратор</a></li>
+                    <li id="navLogout" style="display: none;"><a href="#" onclick="logoutUser(); return false;">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="form-box">
+            <div class="tabs">
+                <button type="button" class="tab-btn active" onclick="switchAuthTab('loginForm', this)">Авторизація</button>
+                <button type="button" class="tab-btn" onclick="switchAuthTab('registerForm', this)">Реєстрація</button>
+            </div>
+            <!-- Форма входу -->
+            <form id="loginForm" onsubmit="return handleLogin(event)" novalidate>
+                <h2>Вхід у систему</h2>
+                <div class="form-row" id="loginEmailRow">
+                    <label for="loginEmail">Електронна пошта (Email):</label>
+                    <input type="email" id="loginEmail" placeholder="user@example.com">
+                    <div class="error-text">* Введіть коректний email</div>
+                </div>
+                <div class="form-row" id="loginPassRow">
+                    <label for="loginPassword">Пароль:</label>
+                    <input type="password" id="loginPassword" placeholder="Мінімум 6 символів">
+                    <div class="error-text">* Пароль має містити не менше 6 символів</div>
+                </div>
+                <!-- Тестова підказка для макета, після підключення БД буде прибрано -->
+                <p style="font-size: 12px; color: #555555; margin-bottom: 12px;">
+                    Для входу в панель адміністратора використайте: <strong>admin@gmail.com</strong>
+                </p>
+                <button type="submit" class="btn">Увійти</button>
+            </form>
+            <!-- Форма реєстрації (на бекенді додасться action="register.php" та атрибути name) -->
+            <form id="registerForm" style="display: none;" onsubmit="return handleRegister(event)" novalidate>
+                <h2>Реєстрація користувача</h2>
+                <div class="form-row" id="regNameRow">
+                    <label for="regName">Ім'я та прізвище:</label>
+                    <input type="text" id="regName" placeholder="Петренко Олександр">
+                    <div class="error-text">* Введіть коректне ім'я (мінімум 3 літери)</div>
+                </div>
+                <div class="form-row" id="regEmailRow">
+                    <label for="regEmail">Електронна пошта (Email):</label>
+                    <input type="email" id="regEmail" placeholder="user@example.com">
+                    <div class="error-text">* Введіть коректний email</div>
+                </div>
+                <div class="form-row" id="regPhoneRow">
+                    <label for="regPhone">Телефон:</label>
+                    <input type="tel" id="regPhone" placeholder="+380XXXXXXXXX">
+                    <div class="error-text">* Формат телефону: +380XXXXXXXXX</div>
+                </div>
+                <div class="form-row" id="regPassRow">
+                    <label for="regPassword">Пароль:</label>
+                    <input type="password" id="regPassword" placeholder="Мінімум 6 символів">
+                    <div class="error-text">* Мінімальна довжина пароля — 6 символів</div>
+                </div>
+                <div class="form-row" id="regConfirmRow">
+                    <label for="regConfirm">Повторіть пароль:</label>
+                    <input type="password" id="regConfirm" placeholder="Повторіть пароль">
+                    <div class="error-text">* Паролі не співпадають</div>
+                </div>
+                <button type="submit" class="btn">Зареєструватися</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            Курсова робота з дисципліни «Web-програмування та web-дизайн» - Варіант 8
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

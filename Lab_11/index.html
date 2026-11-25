@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна сторінка - Електронний каталог меблів</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Електронний каталог меблів</a>
+            <!-- Навігація сайту на етапі бекенду винесемо в окремий шаблон і прив'яжемо до сесії -->
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="catalog.html">Каталог товарів</a></li>
+                    <li id="navAuth"><a href="auth.html">Вхід/Реєстрація</a></li>
+                    <li id="navAdmin" style="display: none;"><a href="admin.html">Адміністратор</a></li>
+                    <li id="navLogout" style="display: none;"><a href="#" onclick="logoutUser(); return false;">Вийти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="box">
+            <h1>Електронний каталог м’яких та корпусних меблів</h1>
+            <p>
+                Інформаційна система призначена для перегляду асортименту меблевої
+                продукції, пошуку товарів за назвою та фільтрування за виробником.
+            </p>
+            <div class="warning-box">
+                <strong>Увага:</strong> перегляд каталогу товарів доступний лише зареєстрованим користувачам.
+                Для переходу до каталогу виконайте вхід або зареєструйтеся.
+            </div>
+            <!-- Тимчасове перемикання кнопок через JS; на бекенді керуватиметься через $_SESSION -->
+            <a href="auth.html" class="btn" id="homeAuthBtn">Перейти до входу / реєстрації</a>
+            <a href="catalog.html" class="btn" id="homeCatalogBtn" style="display: none;">Перейти до каталогу</a>
+        </div>
+        <div class="slider" id="mainSlider">
+            <div class="slide active">
+                <img src="images/slide1.jpg" alt="М’які меблі" class="slide-img">
+                <div class="slide-text">
+                    <h3>М’які меблі для вітальні та спальні</h3>
+                    <p>Дивани, крісла та ліжка від українських виробників з гарантією якості.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="Корпусні меблі" class="slide-img">
+                <div class="slide-text">
+                    <h3>Корпусні меблі для дому та офісу</h3>
+                    <p>Шафи-купе, комоди, стелажі, комп’ютерні столи та кухонні гарнітури.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="Кухонні меблі" class="slide-img">
+                <div class="slide-text">
+                    <h3>Зручний пошук та фільтрація в каталозі</h3>
+                    <p>Швидкий підбір меблів за категорією, назвою виробу або фабрикою-виробником.</p>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlide(-1)">❮</a>
+            <a class="next" onclick="plusSlide(1)">❯</a>
+            <div class="slider-dots">
+                <span class="slider-dots_item active" onclick="currentSlide(1)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+                <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <h2>Категорії товарів у системі</h2>
+        <!-- Поки список категорій статичний, пізніше виводитимемо циклом із БД -->
+        <div class="categories-list">
+            <div class="category-item">
+                <h3>М'які меблі</h3>
+                <p>Прямі та кутові дивани, м’які крісла, пуфи, двоспальні ліжка.</p>
+            </div>
+            <div class="category-item">
+                <h3>Корпусні меблі</h3>
+                <p>Шафи розпашні та шафи-купе, комоди, тумби під телевізор, пенали.</p>
+            </div>
+            <div class="category-item">
+                <h3>Для кухні</h3>
+                <p>Кухонні модульні секції, обідні столи та стільці.</p>
+            </div>
+            <div class="category-item">
+                <h3>Офісні меблі</h3>
+                <p>Письмові та комп’ютерні столи, офісні крісла, стелажі для документів.</p>
+            </div>
+            <div class="category-item">
+                <h3>Декор та аксесуари</h3>
+                <p>Настінні полиці, дзеркала, журнальні столики.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            Курсова робота з дисципліни «Web-програмування та web-дизайн» - Варіант 8
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
