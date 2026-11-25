@@ -1,6 +1,6 @@
 let productsList = [];
 let activeCategory = "all";
-let currentSlide = 0;
+let slideIndex = 1;
 function getSavedProducts() {
     let data = localStorage.getItem("furniture_catalog_v2");
     if (data) {
@@ -57,6 +57,7 @@ function updateNavigation() {
         homeCatalogBtn.style.display = isAuth ? "inline-block" : "none";
     }
 }
+
 // Вихід із системи на бекенді тут буде закриття сесії
 function logoutUser() {
     localStorage.removeItem("isAuth");
@@ -64,21 +65,28 @@ function logoutUser() {
     window.location.href = "index.html";
 }
 // Слайдер на головній сторінці
-function changeSlide(step) {
-    let slides = document.querySelectorAll(".slide");
-    let counter = document.getElementById("slideCounter");
+function plusSlide(n) {
+    showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+function showSlides(n) {
+    let slides = document.querySelectorAll("#mainSlider .slide");
+    let dots = document.querySelectorAll("#mainSlider .slider-dots_item");
     if (slides.length === 0) return;
-    currentSlide = currentSlide + step;
-    if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-    } else if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    }
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
     for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("active");
     }
-    slides[currentSlide].classList.add("active");
-    counter.textContent = "Слайд " + (currentSlide + 1) + " з " + slides.length;
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    slides[slideIndex - 1].classList.add("active");
+    if (dots.length > 0) {
+        dots[slideIndex - 1].classList.add("active");
+    }
 }
 // Переключення вкладок входу та реєстрації
 function switchAuthTab(formId, btn) {
@@ -115,7 +123,7 @@ function handleLogin(e) {
     let okEmail = setFieldError("loginEmailRow", emailPattern.test(email));
     let okPass = setFieldError("loginPassRow", pass.length >= 6);
     if (okEmail && okPass) {
-        // Заглушка авторизації для макета
+        // Заглушка авторизації для макета; при підключенні PHP перевірка піде через БД
         localStorage.setItem("isAuth", "1");
         // Тимчасова перевірка адміна за поштою (потім роль підтягуватиметься з таблиці users)
         if (email.toLowerCase() === "admin@gmail.com") {
@@ -143,7 +151,7 @@ function handleRegister(e) {
     let v4 = setFieldError("regPassRow", pass.length >= 6);
     let v5 = setFieldError("regConfirmRow", confirm === pass && confirm.length >= 6);
     if (v1 && v2 && v3 && v4 && v5) {
-        // Імітація реєстрації на клієнті
+        // Імітація реєстрації на клієнті (далі відправка форми у PHP та запис у базу)
         localStorage.setItem("isAuth", "1");
         localStorage.setItem("userRole", "user");
         alert("Реєстрація успішна. Виконано вхід у каталог");
