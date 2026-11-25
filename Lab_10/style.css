@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #222222;
+    line-height: 1.5;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+header {
+    background-color: #334e68;
+    color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 3px solid #243b53;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+.header-sub {
+    font-size: 14px;
+    color: #d9e2ec;
+}
+main {
+    padding: 25px 0 40px;
+    min-height: 80vh;
+}
+h1, h2, h3 {
+    margin-bottom: 12px;
+    color: #102a43;
+}
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #334e68;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #243b53;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn:hover {
+    background-color: #243b53;
+}
+.btn-small {
+    padding: 5px 10px;
+    font-size: 13px;
+}
+.see-all-btn {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+/* Стандартні блоки */
+.box {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin-bottom: 16px;
+}
+/* Основна сітка */
+.catalog-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+.category-menu {
+    list-style: none;
+    max-height: 450px;
+    overflow-y: auto;
+}
+.category-item {
+    padding: 7px 12px;
+    background-color: #e6e6e6;
+    border: 1px solid #bbbbbb;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #222222;
+}
+.category-item:hover {
+    background-color: #d9e2ec;
+}
+.category-item.active {
+    background-color: #334e68;
+    color: #ffffff;
+    border-color: #243b53;
+}
+/* Сітка товарів */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 16px;
+}
+.product-card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.product-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    border: 1px solid #d0d7de;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+.product-img-large {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    object-fit: contain;
+    border: 1px solid #d0d7de;
+    background-color: #ffffff;
+    margin-bottom: 12px;
+}
+.product-meta {
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 4px;
+}
+.product-price {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #102a43;
+}
+.error-msg {
+    color: #c92a2a;
+    font-size: 14px;
+}
+/* Таблиця характеристик товару */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+.details-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    font-size: 14px;
+}
+.details-table td:first-child {
+    font-weight: bold;
+    width: 180px;
+    background-color: #f9f9f9;
+}
+footer {
+    background-color: #334e68;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 13px;
+    border-top: 3px solid #243b53;
+}
+@media (max-width: 768px) {
+    .catalog-layout {
+        grid-template-columns: 1fr;
+    }
+    .category-menu {
+        max-height: 220px;
+    }
+}
