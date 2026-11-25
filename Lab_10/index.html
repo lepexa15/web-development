@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №10 - Електронний каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Електронний каталог</a>
+            <span class="header-sub">Лабораторна робота №10 - Асинхронність у JavaScript</span>
+        </div>
+    </header>
+    <main class="container">
+        <div class="catalog-layout">
+            <aside class="sidebar-column">
+                <div class="box">
+                    <h2>Категорії товарів</h2>
+                    <ul id="categoriesList" class="category-menu">
+                        <li class="product-meta">Завантаження категорій...</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <button type="button" id="seeAllBtn" class="btn see-all-btn">See all products</button>
+                </div>
+            </aside>
+            <section class="products-area">
+                <h1 id="catalogTitle">Усі товари</h1>
+                <div id="productsGrid" class="products-grid">
+                    <p>Завантаження товарів...</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            Лабораторна робота №10 з дисципліни «Web-програмування та web-дизайн» - Варіант 8
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
